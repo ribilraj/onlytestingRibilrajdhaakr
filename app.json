@@ -12,13 +12,13 @@
     "stack": "container",
     "env": {
         "API_ID": {
-            "description": "𝑬𝒏𝒕𝒆𝒓 𝒀𝒐𝒖𝒓 𝑨𝒑𝒊 𝑰𝑫",
-            "value": "",
+            "description": "29765293",
+            "value": "29765293",
             "required": true
         },
         "API_HASH": {
-            "description": "𝑬𝒏𝒕𝒆𝒓 𝒀𝒐𝒖𝒓 𝑨𝒑𝒊 𝑯𝒂𝒔𝒉",
-            "value": "",
+            "description": "97d072028ac81567a07ba0e8094375cc",
+            "value": "97d072028ac81567a07ba0e8094375cc",
             "required": true
         },
         "BOT_TOKEN": {
@@ -27,13 +27,13 @@
             "required": true
         },
         "OWNER": {
-            "description": "𝙀𝙣𝙩𝙚𝙧 𝙔𝙤𝙪𝙧 𝙏𝙚𝙡𝙚𝙜𝙧𝙖𝙢 𝙄𝘿",
-            "value": "5680454765",
+            "description": "7534974202",
+            "value": "7534974202",
             "required": true
         },
         "CREDIT": {
-            "description": "𝙀𝙣𝙩𝙚𝙧 𝘾𝙧𝙚𝙙𝙞𝙩 𝙉𝙖𝙢𝙚 𝙞𝙣 𝙖𝙡𝙢𝙤𝙨𝙩 6-8 𝙡𝙚𝙩𝙩𝙚𝙧𝙨",
-            "value": "𝙎𝘼𝙄𝙉𝙄 𝘽𝙊𝙏𝙎",
+            "description": "NOTHING",
+            "value": "NOTHING",
             "required": true
         }
     },
