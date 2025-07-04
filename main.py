@@ -52,27 +52,26 @@ api_url = "http://master-api-v3.vercel.app/"
 api_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNzkxOTMzNDE5NSIsInRnX3VzZXJuYW1lIjoi4p61IFtvZmZsaW5lXSIsImlhdCI6MTczODY5MjA3N30.SXzZ1MZcvMp5sGESj0hBKSghhxJ3k1GTWoBUbivUe1I"
 token_cp ='eyJjb3Vyc2VJZCI6IjQ1NjY4NyIsInR1dG9ySWQiOm51bGwsIm9yZ0lkIjo0ODA2MTksImNhdGVnb3J5SWQiOm51bGx9r'
 adda_token = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkcGthNTQ3MEBnbWFpbC5jb20iLCJhdWQiOiIxNzg2OTYwNSIsImlhdCI6MTc0NDk0NDQ2NCwiaXNzIjoiYWRkYTI0Ny5jb20iLCJuYW1lIjoiZHBrYSIsImVtYWlsIjoiZHBrYTU0NzBAZ21haWwuY29tIiwicGhvbmUiOiI3MzUyNDA0MTc2IiwidXNlcklkIjoiYWRkYS52MS41NzMyNmRmODVkZDkxZDRiNDkxN2FiZDExN2IwN2ZjOCIsImxvZ2luQXBpVmVyc2lvbiI6MX0.0QOuYFMkCEdVmwMVIPeETa6Kxr70zEslWOIAfC_ylhbku76nDcaBoNVvqN4HivWNwlyT0jkUKjWxZ8AbdorMLg"
-photologo = 'https://tinypic.host/images/2025/02/07/DeWatermark.ai_1738952933236-1.png' #https://envs.sh/GV0.jpg
-photoyt = 'https://tinypic.host/images/2025/03/18/YouTube-Logo.wine.png' #https://envs.sh/GVi.jpg
-photocp = 'https://tinypic.host/images/2025/03/28/IMG_20250328_133126.jpg'
-photozip = 'https://envs.sh/cD_.jpg'
+photologo = 'https://i.ibb.co/spTsXjgs/gfksopgkdogm.jpg' #https://envs.sh/GV0.jpg
+photoyt = 'https://i.ibb.co/spTsXjgs/gfksopgkdogm.jpg' #https://envs.sh/GVi.jpg
+photocp = 'https://i.ibb.co/spTsXjgs/gfksopgkdogm.jpg'
+photozip = 'https://i.ibb.co/spTsXjgs/gfksopgkdogm.jpg'
 
 
 # Inline keyboard for start command
-BUTTONSCONTACT = InlineKeyboardMarkup([[InlineKeyboardButton(text="📞 Contact", url="https://t.me/martin_01bot")]])
+BUTTONSCONTACT = InlineKeyboardMarkup([[InlineKeyboardButton(text="📞 Contact", url="https://t.me/Final_piece")]])
 keyboard = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton(text="🛠️ Help", url="https://t.me/+z9zdzeOQ-zhlZjg5"),
-            InlineKeyboardButton(text="🛠️ Repo", url="https://github.com/nikhilsainiop/saini-txt-direct"),
+            InlineKeyboardButton(text="🛠️ Help", url="https://t.me/Final_piece"),
+            InlineKeyboardButton(text="🛠️ Repo", url="https://github.com/t.me/Final_piece"),
         ],
     ]
 )
 
 # Image URLs for the random image feature
 image_urls = [
-    "https://tinypic.host/images/2025/02/07/IMG_20250207_224444_975.jpg",
-    "https://tinypic.host/images/2025/02/07/DeWatermark.ai_1738952933236-1.png",
+    "https://i.ibb.co/spTsXjgs/gfksopgkdogm.jpg"
     # Add more image URLs as needed
 ]
 
@@ -430,7 +429,7 @@ async def start(bot, m: Message):
             f"🌟 Welcome {m.from_user.first_name}! 🌟\n\n" +
             f"Great! You are a premium member!\n"
             f"Use Command : /help to get started 🌟\n\n"
-            f"If you face any problem contact -  [NOTHING](https://t.me/saini_contact_bot)\n", disable_web_page_preview=True, reply_markup=BUTTONSCONTACT
+            f"If you face any problem contact -  [ALL CLASSES MORENA](https://t.me/Final_piece)\n", disable_web_page_preview=True, reply_markup=BUTTONSCONTACT
         )
     else:
         await asyncio.sleep(2)
@@ -453,7 +452,7 @@ async def start(bot, m: Message):
            f"• 🎓 All Non DRM+AES Encrypted URLs\n"
            f"• 🎓 MPD URLs if the key is known (e.g., Mpd_url?key=key XX:XX)</blockquote>\n\n"
            f"🚀 You are not subscribed to any plan yet!\n\n"
-           f"<blockquote>💵 Monthly Plan: free</blockquote>\n\n"
+           f"<blockquote>💵 Monthly Plan: 800</blockquote>\n\n"
            f"If you want to buy membership of the bot, feel free to contact the Bot Admin.\n", disable_web_page_preview=True, reply_markup=keyboard
     )
 
@@ -478,7 +477,7 @@ async def id_command(client, message: Message):
            f"• 🎓 Utkarsh Protection(Video + PDF)\n"
            f"• 🎓 All Non DRM+AES Encrypted URLs\n"
            f"• 🎓 MPD URLs if the key is known (e.g., Mpd_url?key=key XX:XX)</blockquote>\n\n"
-           f"<b>💵 Monthly Plan: free</b>\n\n"
+           f"<b>💵 Monthly Plan: 800</b>\n\n"
            f"If you want to buy membership of the bot, feel free to contact the Bot Admin.\n", disable_web_page_preview=True, reply_markup=BUTTONSCONTACT
     )  
 
@@ -826,8 +825,8 @@ async def txt_handler(bot: Client, m: Message):
                 cmd = f'yt-dlp -f "{ytf}" "{url}" -o "{name}.mp4"'
 
             try:
-                cc = f'[🎥]Vid Id : {str(count).zfill(3)}\n**Video Title :** `{name1} [{res}p] .mkv`\n<blockquote><b>Batch Name :</b> {b_name}</blockquote>\n\n**Extracted by➤**{CR}\n'
-                cc1 = f'[📕]Pdf Id : {str(count).zfill(3)}\n**File Title :** `{name1} .pdf`\n<blockquote><b>Batch Name :</b> {b_name}</blockquote>\n\n**Extracted by➤**{CR}\n'
+                cc = f'[🎥]Vid Id : {str(count).zfill(3)}\n\n**Video Title :** `{name1} [{res}p] .mkv`\n<blockquote><b>Batch Name :</b> 🥀💔{b_name}</blockquote>\n\n**Extracted by➤**{CR}\n'
+                cc1 = f'[📕]Pdf Id : {str(count).zfill(3)}\n\n**File Title :** `{name1} .pdf`\n<blockquote><b>Batch Name :</b> 🥀💔{b_name}</blockquote>\n\n**Extracted by➤**{CR}\n'
                 cczip = f'[📁]Zip Id : {str(count).zfill(3)}\n**Zip Title :** `{name1} .zip`\n<blockquote><b>Batch Name :</b> {b_name}</blockquote>\n\n**Extracted by➤**{CR}\n' 
                 ccimg = f'[🖼️]Img Id : {str(count).zfill(3)}\n**Img Title :** `{name1} .jpg`\n<blockquote><b>Batch Name :</b> {b_name}</blockquote>\n\n**Extracted by➤**{CR}\n'
                 ccm = f'[🎵]Audio Id : {str(count).zfill(3)}\n**Audio Title :** `{name1} .mp3`\n<blockquote><b>Batch Name :</b> {b_name}</blockquote>\n\n**Extracted by➤**{CR}\n'
@@ -1096,14 +1095,14 @@ async def text_handler(bot: Client, m: Message):
             if "jw-prod" in url:
                 cmd = f'yt-dlp -o "{name}.mp4" "{url}"'
             elif "webvideos.classplusapp." in url:
-               cmd = f'yt-dlp --add-header "referer:https://web.classplusapp.com/" --add-header "x-cdn-tag:empty" -f "{ytf}" "{url}" -o "{name}.mp4"'
+               cmd = f'yt-dlp --add-header "referer:https://web.classplusapp.com/" --add-header "x-cdn-tag:empty" -f "{ytf}" "{url}" -o "{name}ALL CLASSES MORENA.mp4"'
             elif "youtube.com" in url or "youtu.be" in url:
-                cmd = f'yt-dlp --cookies youtube_cookies.txt -f "{ytf}" "{url}" -o "{name}".mp4'
+                cmd = f'yt-dlp --cookies youtube_cookies.txt -f "{ytf}" "{url}" -o "{name}"ALL CLASSES MORENA.mp4'
             else:
-                cmd = f'yt-dlp -f "{ytf}" "{url}" -o "{name}.mp4"'
+                cmd = f'yt-dlp -f "{ytf}" "{url}" -o "{name}ALL CLASSES MORENA.mp4"'
 
             try:
-                cc = f'🎞️𝐓𝐢𝐭𝐥𝐞 » `{name} [{res}].mp4`\n🔗𝐋𝐢𝐧𝐤 » <a href="{link}">__**CLICK HERE**__</a>\n\n🌟𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐁𝐲 » `{CREDIT}`'
+                cc = f'🎞️𝐓𝐢𝐭𝐥𝐞 » `{name} [{res}]ALL CLASSES MORENA.mp4`\n🔗𝐋𝐢𝐧𝐤 » <a href="{link}">__**CLICK HERE**__</a>\n\n🌟𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐁𝐲 » `{CREDIT}`'
                 cc1 = f'📕𝐓𝐢𝐭𝐥𝐞 » `{name}`\n🔗𝐋𝐢𝐧𝐤 » <a href="{link}">__**CLICK HERE**__</a>\n\n🌟𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐁𝐲 » `{CREDIT}`'
                   
                 if "drive" in url:
