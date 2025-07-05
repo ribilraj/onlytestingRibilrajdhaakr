@@ -13,6 +13,7 @@ import urllib.parse
 import yt_dlp
 import tgcrypto
 import cloudscraper
+from datetime import datetime
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import unpad
 from base64 import b64encode, b64decode
@@ -825,7 +826,21 @@ async def txt_handler(bot: Client, m: Message):
                 cmd = f'yt-dlp -f "{ytf}" "{url}" -o "{name}.mp4"'
 
             try:
-                cc = f'[🎥]Vid Id : {str(count).zfill(3)}\n\n**Video Title :** `{name1} [{res}p] .mkv`\n<blockquote><b>Batch Name :</b> 🥀💔{b_name}</blockquote>\n\n**Extracted by➤**{CR}\n'
+                timestamp = datetime.now().strftime("%d %B %Y • %I:%M %p")
+                 cc = f'''╔═════⌬ SYSTEM LOG ⌬═════╗
+                ║ ⚙️  [🎥 VID-ID ➤ {str(count).zfill(3)}]     ║
+                ╚═════⌬ SYSTEM LOG ⌬═════╝
+
+                ╔════❰ 𝙎𝙔𝙎𝙏𝙀𝙈 𝙇𝙊𝙂 ❱══════⊱
+                ║╭━━━━━━━━━━━━━━━━━━━━➣
+                ║┣ 🎬 __**Video Title :**__ `{name1} [{res}p] .mkv`
+                ║┃
+                ║┃ 🧬 <b>Batch Name :</b> 🥀💔{b_name}
+                ║╰━━━━━━━━━━━━━━━━━━━━➣
+                ╚═⌈ 👨‍🚀 <b>Extracted by➤</b> {CR} ⌋━➣⚡\n
+
+                <blockquote>🕒 {timestamp}</blockquote>
+                '''
                 cc1 = f'[📕]Pdf Id : {str(count).zfill(3)}\n\n**File Title :** `{name1} .pdf`\n<blockquote><b>Batch Name :</b> 🥀💔{b_name}</blockquote>\n\n**Extracted by➤**{CR}\n'
                 cczip = f'[📁]Zip Id : {str(count).zfill(3)}\n**Zip Title :** `{name1} .zip`\n<blockquote><b>Batch Name :</b> {b_name}</blockquote>\n\n**Extracted by➤**{CR}\n' 
                 ccimg = f'[🖼️]Img Id : {str(count).zfill(3)}\n**Img Title :** `{name1} .jpg`\n<blockquote><b>Batch Name :</b> {b_name}</blockquote>\n\n**Extracted by➤**{CR}\n'
