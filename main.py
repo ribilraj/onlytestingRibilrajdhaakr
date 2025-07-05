@@ -829,7 +829,7 @@ async def txt_handler(bot: Client, m: Message):
 
             try:
                 timestamp = datetime.now(ZoneInfo("Asia/Kolkata")).strftime("%d %B %Y • %I:%M %p")
-                cc = f'📘 DOCUMENT DETAILS 📘\n━━━━━━━━━━━━━━━━━━━━━━━\n📌 Document ID: #{str(count).zfill(3)}\n📝 Title: {name1}\n━━━━━━━━━━━━━━━━━━━━━━━\n📦 Batch Name:\n<blockquote>{b_name}</blockquote>\n━━━━━━━━━━━━━━━━━━━━━━━\n🛠️ Provided By: {CR}\n━━━━━━━━━━━━━━━━━━━━━━━\n🕒 {timestamp}'
+                cc = f'📘 DOCUMENT DETAILS 📘\n━━━━━━━━━━━━━━━━━━━━━━━\n📌 Document ID: #{str(count).zfill(3)}\n\n📝 Title: {name1}\n━━━━━━━━━━━━━━━━━━━━━━━\n📦 Batch Name:\n<blockquote>{b_name}</blockquote>\n━━━━━━━━━━━━━━━━━━━━━━━\n🛠️ Provided By: {CR}\n━━━━━━━━━━━━━━━━━━━━━━━\n🕒 {timestamp}'
                 cc1 = f'[📕]Pdf Id : {str(count).zfill(3)}\n\n**File Title :** `{name1} .pdf`\n<blockquote><b>Batch Name :</b> 🥀💔{b_name}</blockquote>\n\n**Extracted by➤**{CR}\n'
                 cczip = f'[📁]Zip Id : {str(count).zfill(3)}\n**Zip Title :** `{name1} .zip`\n<blockquote><b>Batch Name :</b> {b_name}</blockquote>\n\n**Extracted by➤**{CR}\n' 
                 ccimg = f'[🖼️]Img Id : {str(count).zfill(3)}\n**Img Title :** `{name1} .jpg`\n<blockquote><b>Batch Name :</b> {b_name}</blockquote>\n\n**Extracted by➤**{CR}\n'
@@ -1099,11 +1099,11 @@ async def text_handler(bot: Client, m: Message):
             if "jw-prod" in url:
                 cmd = f'yt-dlp -o "{name}.mp4" "{url}"'
             elif "webvideos.classplusapp." in url:
-               cmd = f'yt-dlp --add-header "referer:https://web.classplusapp.com/" --add-header "x-cdn-tag:empty" -f "{ytf}" "{url}" -o "{name}ALL CLASSES MORENA.mp4"'
+               cmd = f'yt-dlp --add-header "referer:https://web.classplusapp.com/" --add-header "x-cdn-tag:empty" -f "{ytf}" "{url}" -o "{name}.mp4"'
             elif "youtube.com" in url or "youtu.be" in url:
-                cmd = f'yt-dlp --cookies youtube_cookies.txt -f "{ytf}" "{url}" -o "{name}"ALL CLASSES MORENA.mp4'
+                cmd = f'yt-dlp --cookies youtube_cookies.txt -f "{ytf}" "{url}" -o "{name}".mp4'
             else:
-                cmd = f'yt-dlp -f "{ytf}" "{url}" -o "{name}ALL CLASSES MORENA.mp4"'
+                cmd = f'yt-dlp -f "{ytf}" "{url}" -o "{name}.mp4"'
 
             try:
                 cc = f'🎞️𝐓𝐢𝐭𝐥𝐞 » `{name} [{res}]ALL CLASSES MORENA.mp4`\n🔗𝐋𝐢𝐧𝐤 » <a href="{link}">__**CLICK HERE**__</a>\n\n🌟𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐁𝐲 » `{CREDIT}`'
