@@ -13,6 +13,7 @@ import urllib.parse
 import yt_dlp
 import tgcrypto
 import cloudscraper
+import textwrap
 from datetime import datetime
 from zoneinfo import ZoneInfo
 from Crypto.Cipher import AES
@@ -828,18 +829,20 @@ async def txt_handler(bot: Client, m: Message):
 
             try:
                 timestamp = datetime.now(ZoneInfo("Asia/Kolkata")).strftime("%d %B %Y • %I:%M %p")
-                cc = f'''╔════⌬ VID ID ⌬════╗
-                ║ ⚙️ [VID-ID ➤ {str(count).zfill(3)}]      ║
-                ╚════⌬ ++++ ⌬════╝
+                wrapped_title = "\n".join([f"║┃ {line}" for line in textwrap.wrap(f"🎬 Title : {name1} [{res}p]", width=50)])
+                wrapped_batch = "\n".join([f"║┃ {line}" for line in textwrap.wrap(f"🧬 Batch : {b_name}", width=50)])
+                cc = f'''╔═════⌬ VID ID ⌬═════╗
+                ║ ⚙️ ➤ {str(count).zfill(3)}] ║
+                ╚═════⌬──────────⌬═════╝
 
-                ╔════❰ DETAILS ❱═════⊱
-                ║╭━━━━━━━━━━━━━━━━━━➣
-                ║┣ 🎬 Title : `{name1} [{res}p]`
+                ╔═════❰ DETAILS ❱═════⊱
+                ║╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━➣
+                {wrapped_title}
                 ║┃
-                ║┃ 🧬 Batch : {b_name}
-                ║╰━━━━━━━━━━━━━━━━━━➣
+                {wrapped_batch}
+                ║╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━➣
                 ╚═⌈ 👨‍🚀 By➤ {CR} ⌋━➣⚡
-    
+
                 <blockquote>🕒 {timestamp}</blockquote>
                 '''
                 cc1 = f'[📕]Pdf Id : {str(count).zfill(3)}\n\n**File Title :** `{name1} .pdf`\n<blockquote><b>Batch Name :</b> 🥀💔{b_name}</blockquote>\n\n**Extracted by➤**{CR}\n'
