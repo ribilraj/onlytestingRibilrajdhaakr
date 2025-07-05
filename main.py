@@ -829,18 +829,7 @@ async def txt_handler(bot: Client, m: Message):
 
             try:
                 timestamp = datetime.now(ZoneInfo("Asia/Kolkata")).strftime("%d %B %Y • %I:%M %p")
-                cc = f"""📘 <b>DOCUMENT DETAILS</b> 📘
-                ━━━━━━━━━━━━━━━━━━━━━━━
-                📌 <b>Document ID:</b> #{str(count).zfill(3)}
-                📝 <b>Title:</b> {name1}
-                ━━━━━━━━━━━━━━━━━━━━━━━
-                📦 <b>Batch Name:</b>
-                <blockquote>{b_name}</blockquote>
-                ━━━━━━━━━━━━━━━━━━━━━━━
-                🛠️ <b>Provided By:</b> {CR}
-                ━━━━━━━━━━━━━━━━━━━━━━━
-                🕒 {timestamp}
-                """
+                cc = f'📘 DOCUMENT DETAILS 📘\n━━━━━━━━━━━━━━━━━━━━━━━\n📌 Document ID: #{str(count).zfill(3)}\n📝 Title: {name1}\n━━━━━━━━━━━━━━━━━━━━━━━\n📦 Batch Name:\n<blockquote>{b_name}</blockquote>\n━━━━━━━━━━━━━━━━━━━━━━━\n🛠️ Provided By: {CR}\n━━━━━━━━━━━━━━━━━━━━━━━\n🕒 {timestamp}'
                 cc1 = f'[📕]Pdf Id : {str(count).zfill(3)}\n\n**File Title :** `{name1} .pdf`\n<blockquote><b>Batch Name :</b> 🥀💔{b_name}</blockquote>\n\n**Extracted by➤**{CR}\n'
                 cczip = f'[📁]Zip Id : {str(count).zfill(3)}\n**Zip Title :** `{name1} .zip`\n<blockquote><b>Batch Name :</b> {b_name}</blockquote>\n\n**Extracted by➤**{CR}\n' 
                 ccimg = f'[🖼️]Img Id : {str(count).zfill(3)}\n**Img Title :** `{name1} .jpg`\n<blockquote><b>Batch Name :</b> {b_name}</blockquote>\n\n**Extracted by➤**{CR}\n'
