@@ -827,7 +827,7 @@ async def txt_handler(bot: Client, m: Message):
 
             try:
                 timestamp = datetime.now().strftime("%d %B %Y • %I:%M %p")
-                 cc = f'''╔═════⌬ SYSTEM LOG ⌬═════╗
+                cc = f'''╔═════⌬ SYSTEM LOG ⌬═════╗
                 ║ ⚙️  [🎥 VID-ID ➤ {str(count).zfill(3)}]     ║
                 ╚═════⌬ SYSTEM LOG ⌬═════╝
 
