@@ -14,6 +14,7 @@ import yt_dlp
 import tgcrypto
 import cloudscraper
 from datetime import datetime
+from zoneinfo import zoneinfo
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import unpad
 from base64 import b64encode, b64decode
@@ -826,19 +827,19 @@ async def txt_handler(bot: Client, m: Message):
                 cmd = f'yt-dlp -f "{ytf}" "{url}" -o "{name}.mp4"'
 
             try:
-                timestamp = datetime.now().strftime("%d %B %Y • %I:%M %p")
-                cc = f'''╔═════⌬ SYSTEM LOG ⌬═════╗
-                ║ ⚙️  [🎥 VID-ID ➤ {str(count).zfill(3)}]     ║
-                ╚═════⌬ SYSTEM LOG ⌬═════╝
+                timestamp = datetime.now(ZoneInfo("Asia/Kolkata")).strftime("%d %B %Y • %I:%M %p")
+                cc = f'''╔════⌬ VID ID ⌬════╗
+                ║ ⚙️ [VID-ID ➤ {str(count).zfill(3)}]      ║
+                ╚════⌬ ++++ ⌬════╝
 
-                ╔════❰ 𝙎𝙔𝙎𝙏𝙀𝙈 𝙇𝙊𝙂 ❱══════⊱
-                ║╭━━━━━━━━━━━━━━━━━━━━➣
-                ║┣ 🎬 __**Video Title :**__ `{name1} [{res}p] .mkv`
+                ╔════❰ DETAILS ❱═════⊱
+                ║╭━━━━━━━━━━━━━━━━━━➣
+                ║┣ 🎬 Title : `{name1} [{res}p]`
                 ║┃
-                ║┃ 🧬 <b>Batch Name :</b> 🥀💔{b_name}
-                ║╰━━━━━━━━━━━━━━━━━━━━➣
-                ╚═⌈ 👨‍🚀 <b>Extracted by➤</b> {CR} ⌋━➣⚡\n
-
+                ║┃ 🧬 Batch : {b_name}
+                ║╰━━━━━━━━━━━━━━━━━━➣
+                ╚═⌈ 👨‍🚀 By➤ {CR} ⌋━➣⚡
+    
                 <blockquote>🕒 {timestamp}</blockquote>
                 '''
                 cc1 = f'[📕]Pdf Id : {str(count).zfill(3)}\n\n**File Title :** `{name1} .pdf`\n<blockquote><b>Batch Name :</b> 🥀💔{b_name}</blockquote>\n\n**Extracted by➤**{CR}\n'
