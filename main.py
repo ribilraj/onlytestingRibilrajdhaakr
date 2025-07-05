@@ -14,7 +14,7 @@ import yt_dlp
 import tgcrypto
 import cloudscraper
 from datetime import datetime
-from zoneinfo import zoneinfo
+from zoneinfo import ZoneInfo
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import unpad
 from base64 import b64encode, b64decode
