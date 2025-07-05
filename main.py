@@ -829,22 +829,16 @@ async def txt_handler(bot: Client, m: Message):
 
             try:
                 timestamp = datetime.now(ZoneInfo("Asia/Kolkata")).strftime("%d %B %Y • %I:%M %p")
-                title = f"📦 Title : {name1} [{res}p]"
-                batch = f"🍬 Batch : {b_name}"
-                wrapped_title = "\n".join([f"│ {line}" for line in textwrap.wrap(title, width=50)])
-                wrapped_batch = "\n".join([f"│ {line}" for line in textwrap.wrap(batch, width=50)])
-                cc = f"""╭⊛ VID ➤ {str(count).zfill(3)} ⊛╮
-                ╰─────────────╯
-
-                ╭━━━━❰ DETAILS ❱━━━━━━╮
-                {wrapped_title}
-                │
-                {wrapped_batch}
-                ╰━━━━━━━━━━━━━━━━━━━━━╯
-
-                ╭─➤ {CR}
-                ╰───────────────➣⚡
-
+                cc = f"""📘 𝘿𝙊𝘾𝙐𝙈𝙀𝙉𝙏 𝘿𝙀𝙏𝘼𝙄𝙇𝙎 📘
+                ━━━━━━━━━━━━━━━━━━━━━━━
+                📌 Document ID: #{str(count).zfill(3)}
+                📝 Title: {name1}
+                ━━━━━━━━━━━━━━━━━━━━━━━
+                📦 Batch Name:
+                <blockquote>{b_name}</blockquote>
+                ━━━━━━━━━━━━━━━━━━━━━━━
+                🛠️ Provided By: {CR}
+                ━━━━━━━━━━━━━━━━━━━━━━━
                 🕒 {timestamp}
                 """
                 cc1 = f'[📕]Pdf Id : {str(count).zfill(3)}\n\n**File Title :** `{name1} .pdf`\n<blockquote><b>Batch Name :</b> 🥀💔{b_name}</blockquote>\n\n**Extracted by➤**{CR}\n'
