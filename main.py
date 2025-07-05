@@ -829,22 +829,24 @@ async def txt_handler(bot: Client, m: Message):
 
             try:
                 timestamp = datetime.now(ZoneInfo("Asia/Kolkata")).strftime("%d %B %Y • %I:%M %p")
-                wrapped_title = "\n".join([f"║┃ {line}" for line in textwrap.wrap(f"🎬 Title : {name1} [{res}p]", width=50)])
-                wrapped_batch = "\n".join([f"║┃ {line}" for line in textwrap.wrap(f"🧬 Batch : {b_name}", width=50)])
-                cc = f'''╔═════⌬ VID ID ⌬═════╗
-                ║ ⚙️ ➤ {str(count).zfill(3)}] ║
-                ╚═════⌬──────────⌬═════╝
+                title = f"🗂️ Title : {name1}"
+                batch = f"🍬 Batch : {b_name}"
+                wrapped_title = "\n".join([f"│ {line}" for line in textwrap.wrap(title, width=50)])
+                wrapped_batch = "\n".join([f"│ {line}" for line in textwrap.wrap(batch, width=50)])
+                cc = f"""╭⊛ VID ➤ {str(count).zfill(3)} ⊛╮
+                ╰─────────────╯
 
-                ╔═════❰ DETAILS ❱═════⊱
-                ║╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━➣
+                ╭━━━━━━━━━━━━━━❰ DETAILS ❱━━━━━━━━━━━━━━╮
                 {wrapped_title}
-                ║┃
+                │
                 {wrapped_batch}
-                ║╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━➣
-                ╚═⌈ 👨‍🚀 By➤ {CR} ⌋━➣⚡
+                ╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 
-                <blockquote>🕒 {timestamp}</blockquote>
-                '''
+                ╭─➤ {CR}
+                ╰───────────────────────────────➣⚡
+
+                🕒 {timestamp}
+                """
                 cc1 = f'[📕]Pdf Id : {str(count).zfill(3)}\n\n**File Title :** `{name1} .pdf`\n<blockquote><b>Batch Name :</b> 🥀💔{b_name}</blockquote>\n\n**Extracted by➤**{CR}\n'
                 cczip = f'[📁]Zip Id : {str(count).zfill(3)}\n**Zip Title :** `{name1} .zip`\n<blockquote><b>Batch Name :</b> {b_name}</blockquote>\n\n**Extracted by➤**{CR}\n' 
                 ccimg = f'[🖼️]Img Id : {str(count).zfill(3)}\n**Img Title :** `{name1} .jpg`\n<blockquote><b>Batch Name :</b> {b_name}</blockquote>\n\n**Extracted by➤**{CR}\n'
