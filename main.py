@@ -200,7 +200,7 @@ async def youtube_to_txt(client, message: Message):
     await input_message.delete(True)
     await editable.delete(True)
 
-    Fetch the YouTube information using yt-dlp with cookies
+    #Fetch the YouTube information using yt-dlp with cookies
     ydl_opts = {
         'quiet': True,
         'extract_flat': True,
