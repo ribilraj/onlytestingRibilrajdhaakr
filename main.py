@@ -829,16 +829,15 @@ async def txt_handler(bot: Client, m: Message):
 
             try:
                 timestamp = datetime.now(ZoneInfo("Asia/Kolkata")).strftime("%d %B %Y • %I:%M %p")
-                cc = f"""
-                📘 *𝘿𝙊𝘾𝙐𝙈𝙀𝙉𝙏 𝘿𝙀𝙏𝘼𝙄𝙇𝙎* 📘
+                cc = f"""📘 <b>DOCUMENT DETAILS</b> 📘
                 ━━━━━━━━━━━━━━━━━━━━━━━
-                📌 ***Document ID:*** #{str(count).zfill(3)}
-                📝 ***Title:*** {name1}
+                📌 <b>Document ID:</b> #{str(count).zfill(3)}
+                📝 <b>Title:</b> {name1}
                 ━━━━━━━━━━━━━━━━━━━━━━━
-                📦 ***Batch Name:***
-                ➤ _{b_name}_
+                📦 <b>Batch Name:</b>
+                <blockquote>{b_name}</blockquote>
                 ━━━━━━━━━━━━━━━━━━━━━━━
-                🛠️ ***Provided By:*** {CR}
+                🛠️ <b>Provided By:</b> {CR}
                 ━━━━━━━━━━━━━━━━━━━━━━━
                 🕒 {timestamp}
                 """
